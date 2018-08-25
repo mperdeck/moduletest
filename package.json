@@ -1,0 +1,27 @@
+{
+  "name": "moduletest",
+  "version": "1.0.0",
+  "description": "x ts file - autocompile to wwwroot\r x ts file - jquery symbols\r x ts module - with jquery, load into local page\r x ts lib module same solution\r   ts lib module other solution, via link",
+  "main": "index.js",
+  "dependencies": {
+    "@types/jquery": "^3.3.6"
+  },
+  "devDependencies": {
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mperdeck/moduletest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mperdeck/moduletest/issues"
+  },
+  "homepage": "https://github.com/mperdeck/moduletest#readme"
+}
