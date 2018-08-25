@@ -1,9 +1,11 @@
-﻿// version 2aa
+﻿import * as ProductionShared2 from "../ScriptModules/production-shared2.js";
+
+// version 2aa
 
 export class JobValidator {
     validate(s: string) {
-        $("h2").css("color", "red");
-        console.log(s);
+        let jobValidator2 = new ProductionShared2.JobValidator();
+        jobValidator2.validate("def2");
     }
 }
 
