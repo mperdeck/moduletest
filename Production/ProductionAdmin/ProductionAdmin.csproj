@@ -1,11 +1,37 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+
+  <!--Typescript settings-->
+  <PropertyGroup>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+
+    <TypeScriptOutDir>wwwroot/scripts</TypeScriptOutDir>
+
+    <!--
+    Set to the root of the project, so generated directory structure within TypeScriptOutDir
+    mirros the project directory structure.
+    -->
+    <TypeScriptRootDir>./</TypeScriptRootDir>
+  </PropertyGroup>
+  
+  
+  
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\Home\Index.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="Views\Home\Index.ts" />
   </ItemGroup>
 
 </Project>
