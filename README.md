@@ -30,14 +30,36 @@ https://www.typescriptlang.org/docs/handbook/modules.html
 
 ---------------------------------------------------
 To install the jquery types:
+
+Create package.json, so you can do npm restore
+npm init -y
+
 npm install --save @types/jquery
 
 (in directory containing the solution dir, so all projects can pick up the typings)
 
 Typescript automatically finds the types in the node_modules/@typings dir.
 
+----------------------------
+install webpack:
 
+cd dir-with-solution-dir
+npm init -y
+npm install webpack webpack-cli --save-dev
 
+To run webpack
+npx webpack
+
+----------------------------
+SplitChunksPlugin
+
+https://wanago.io/2018/06/04/code-splitting-with-splitchunksplugin-in-webpack-4/
+https://webpack.js.org/plugins/split-chunks-plugin/
+
+--------------
+mode
+
+https://medium.com/webpack/webpack-4-mode-and-optimization-5423a6bc597a
 
 
 
