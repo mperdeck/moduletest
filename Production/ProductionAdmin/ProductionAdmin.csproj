@@ -12,10 +12,16 @@
     mirros the project directory structure.
     -->
     <TypeScriptRootDir>./</TypeScriptRootDir>
+
+
+    <TypeScriptTarget>es5</TypeScriptTarget>
+    
+    <!--Be sure to generate ES6 modules so the browser can process them. 
+    With other types of modules, you'd have to load a separate module loader-->
+    <TypeScriptModuleKind>ES6</TypeScriptModuleKind>
   </PropertyGroup>
-  
-  
-  
+
+
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -23,6 +29,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ScriptModules\production-shared.ts" />
     <None Remove="Views\Home\Index.ts" />
   </ItemGroup>
 
@@ -31,7 +38,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ScriptModules\production-shared.ts" />
     <TypeScriptCompile Include="Views\Home\Index.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\scripts\ScriptModules\" />
+    <Folder Include="wwwroot\scripts\Views\Home\" />
   </ItemGroup>
 
 </Project>

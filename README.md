@@ -3,7 +3,7 @@
 ## todo
 
 x ts file - autocompile to wwwroot
-  ts file - jquery symbols
+x ts file - jquery symbols
   ts module - with jquery, load into local page
   ts lib module same solution
   ts lib module other solution, via link
@@ -23,6 +23,10 @@ https://www.typescriptlang.org/docs/handbook/compiler-options-in-msbuild.html
 
 Typescript typings
 https://blog.angular-university.io/typescript-2-type-system-how-do-type-definitions-work-in-npm-when-to-use-types-and-why-what-are-compiler-opt-in-types/
+
+Typescript modules
+https://www.typescriptlang.org/docs/handbook/modules.html
+
 
 ---------------------------------------------------
 To install the jquery types:

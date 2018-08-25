@@ -95,5 +95,6 @@
 
 @section Scripts
 {
-    <script src="~/scripts/Views/Home/Index.js"></script>
+    @*Use type=module, even if you're not exporting from Index.js. This way, Chrome will handle the imports correctly in Index.js*@
+    <script type="module" src="~/scripts/Views/Home/Index.js"></script>
 }
