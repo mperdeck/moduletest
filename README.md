@@ -4,8 +4,8 @@
 
 x ts file - autocompile to wwwroot
 x ts file - jquery symbols
-  ts module - with jquery, load into local page
-  ts lib module same solution
+x ts module - with jquery, load into local page
+x ts lib module same solution
   ts lib module other solution, via link
 
 react module - local page

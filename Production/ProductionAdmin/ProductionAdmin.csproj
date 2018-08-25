@@ -29,7 +29,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ScriptComponents\click-handler.ts" />
     <None Remove="ScriptModules\production-shared.ts" />
+    <None Remove="ScriptModules\production-shared2.ts" />
     <None Remove="Views\Home\Index.ts" />
   </ItemGroup>
 
@@ -38,6 +40,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ScriptComponents\click-handler.ts" />
+    <TypeScriptCompile Include="ScriptModules\production-shared2.ts" />
     <TypeScriptCompile Include="ScriptModules\production-shared.ts" />
     <TypeScriptCompile Include="Views\Home\Index.ts" />
   </ItemGroup>
