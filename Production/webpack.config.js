@@ -3,8 +3,8 @@ var productionAdminScriptsDir = "./ProductionAdmin/wwwroot/scripts/";
 module.exports = {
   mode: "production",
   entry: {
-    index: productionAdminScriptsDir + "Views/Home/Index.js",
-    clickhandler: productionAdminScriptsDir + "ScriptComponents/click-handler.js"
+    'views/home/index': productionAdminScriptsDir + "Views/Home/Index.js",
+    'ScriptComponents/clickhandler': productionAdminScriptsDir + "ScriptComponents/click-handler.js"
   },
   output: {
     filename: "[name].js",
