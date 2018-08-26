@@ -1,17 +1,24 @@
+var productionAdminScriptsDir = "./ProductionAdmin/wwwroot/scripts/";
+
 module.exports = {
   mode: "production",
   entry: {
-    index: "./ProductionAdmin/wwwroot/scripts/Views/Home/Index.js",
-    clickhandler: "./ProductionAdmin/wwwroot/scripts/ScriptComponents/click-handler.js"
+    index: productionAdminScriptsDir + "Views/Home/Index.js",
+    clickhandler: productionAdminScriptsDir + "ScriptComponents/click-handler.js"
   },
   output: {
-    filename: "[name].[chunkhash].bundle.js",
+    filename: "[name].js",
     path: __dirname + "/ProductionAdmin/wwwroot/dist"
   },
   optimization: {
     splitChunks: {
       chunks: "all",
-      minSize: 0
+      cacheGroups: {
+        utilities: {
+          test: /[\\/]scripts[\\/]ScriptModules[\\/]/,
+          minSize: 0
+        }
+      }
     }
   }
 };
