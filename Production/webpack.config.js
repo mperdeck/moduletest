@@ -14,8 +14,9 @@ module.exports = {
     splitChunks: {
       chunks: "all",
       cacheGroups: {
-        utilities: {
+        scriptmodules: {
           test: /[\\/]scripts[\\/]ScriptModules[\\/]/,
+          name: 'scriptmodules',
           minSize: 0
         }
       }
