@@ -27,6 +27,8 @@ https://blog.angular-university.io/typescript-2-type-system-how-do-type-definiti
 Typescript modules
 https://www.typescriptlang.org/docs/handbook/modules.html
 
+https://github.com/aspnet/JavaScriptServices
+
 
 ---------------------------------------------------
 To install the jquery types:
@@ -60,6 +62,14 @@ https://webpack.js.org/plugins/split-chunks-plugin/
 mode
 
 https://medium.com/webpack/webpack-4-mode-and-optimization-5423a6bc597a
+
+------------------
+msbuild and webpack
+
+https://recalll.co/ask/v/topic/MSBuild-and-Webpack/5a03f3d51126f4cb698b512f
+
+
+
 
 
 
