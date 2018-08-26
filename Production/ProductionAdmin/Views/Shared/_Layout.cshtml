@@ -54,8 +54,8 @@
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
-        
-        
+
+
         @*jquery loaded from CDN, with fallback and integrity check*@
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
@@ -74,6 +74,12 @@
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
+
+        @*Dist files only generated in Release mode. Note, not loaded as a module!*@
+        <script src="~/dist/scriptmodules.js" asp-append-version="true"></script>
+
+
+
     </environment>
 
     @RenderSection("Scripts", required: false)
