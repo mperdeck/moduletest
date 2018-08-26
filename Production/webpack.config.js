@@ -7,5 +7,11 @@ module.exports = {
   output: {
     filename: "[name].[chunkhash].bundle.js",
     path: __dirname + "/ProductionAdmin/wwwroot/dist"
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      minSize: 0
+    }
   }
 };
