@@ -1,4 +1,4 @@
-﻿import * as ProductionShared2 from "../ScriptModules/production-shared2.js";
+﻿import * as ProductionShared2 from "../ScriptModules/production-shared2";
 
 // version 2aa
 

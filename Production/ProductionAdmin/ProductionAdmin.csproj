@@ -3,15 +3,16 @@
 
   <!--Typescript settings-->
   <PropertyGroup>
-    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <!--<TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>-->
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
 
-    <TypeScriptOutDir>wwwroot/scripts</TypeScriptOutDir>
+    <!--<TypeScriptOutDir>wwwroot/scripts</TypeScriptOutDir>-->
 
     <!--
     Set to the root of the project, so generated directory structure within TypeScriptOutDir
     mirros the project directory structure.
     -->
-    <TypeScriptRootDir>./</TypeScriptRootDir>
+    <!--<TypeScriptRootDir>./</TypeScriptRootDir>-->
 
 
     <TypeScriptTarget>es5</TypeScriptTarget>
@@ -27,6 +28,15 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
   </PropertyGroup>
+
+
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\scripts\**" />
+    <Content Remove="wwwroot\scripts\**" />
+    <EmbeddedResource Remove="wwwroot\scripts\**" />
+    <None Remove="wwwroot\scripts\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="ScriptComponents\click-handler.ts" />
@@ -44,11 +54,6 @@
     <TypeScriptCompile Include="ScriptModules\production-shared2.ts" />
     <TypeScriptCompile Include="ScriptModules\production-shared.ts" />
     <TypeScriptCompile Include="Views\Home\Index.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\scripts\ScriptModules\" />
-    <Folder Include="wwwroot\scripts\Views\Home\" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿// version 2aa
 
 // Use extension .js, because that is what is used at runtime
-import * as ProductionShared from "../ScriptModules/production-shared.js";
+import * as ProductionShared from "../ScriptModules/production-shared";
 
 // Any symbol defined in a module is confined to that module.
 // To make a symbol available to say an html onclick handler,

@@ -1,10 +1,19 @@
-var productionAdminScriptsDir = "./ProductionAdmin/wwwroot/scripts/";
+var productionAdminScriptsDir = "./ProductionAdmin/";
 
 module.exports = {
   mode: "production",
+  resolve: {
+        // For modules referenced with no filename extension, Webpack will consider these extensions
+        extensions: [ '.js', '.ts' ]
+  },
+  module: {
+	rules: [
+      { test: /\.ts$/, use: 'ts-loader' }
+    ]
+  },
   entry: {
-    'views/home/index': productionAdminScriptsDir + "Views/Home/Index.js",
-    'ScriptComponents/clickhandler': productionAdminScriptsDir + "ScriptComponents/click-handler.js"
+    'views/home/index': productionAdminScriptsDir + "Views/Home/Index.ts",
+    'ScriptComponents/clickhandler': productionAdminScriptsDir + "ScriptComponents/click-handler.ts"
   },
   output: {
     filename: "[name].js",
@@ -15,7 +24,7 @@ module.exports = {
       chunks: "all",
       cacheGroups: {
         scriptmodules: {
-          test: /[\\/]scripts[\\/]ScriptModules[\\/]/,
+          test: /[\\/]ScriptModules[\\/]/,
           name: 'scriptmodules',
           minSize: 0
         }

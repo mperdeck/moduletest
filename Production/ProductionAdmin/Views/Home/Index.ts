@@ -1,6 +1,6 @@
 ﻿
 // Use extension .js, because that is what is used at runtime
-import * as ProductionShared from "../../ScriptModules/production-shared.js";
+import * as ProductionShared from "../../ScriptModules/production-shared";
 
 
 // abc 797s
