@@ -46,6 +46,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" />
+    <PackageReference Include="Microsoft.AspNetCore.NodeServices" />
+
+
+    
+
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 

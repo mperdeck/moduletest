@@ -9,8 +9,10 @@
     "typescript": "^3.0.1"
   },
   "devDependencies": {
+    "aspnet-webpack": "^3.0.0",
     "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-middleware": "^3.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

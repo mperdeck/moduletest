@@ -49,6 +49,14 @@ namespace ProductionAdmin
             }
 
             app.UseHttpsRedirection();
+
+
+
+            if (env.IsDevelopment())
+            {
+                app.UseWebpackDevMiddleware();
+            }
+
             app.UseStaticFiles();
             app.UseCookiePolicy();
 

@@ -1,7 +1,7 @@
-var productionAdminScriptsDir = "./ProductionAdmin/";
+var productionAdminScriptsDir = "./";
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   resolve: {
         // For modules referenced with no filename extension, Webpack will consider these extensions
         extensions: [ '.js', '.ts' ]
@@ -17,7 +17,8 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
-    path: __dirname + "/ProductionAdmin/wwwroot/dist"
+    publicPath: '/dist/',
+    path: __dirname + "/wwwroot/dist"
   },
   optimization: {
     splitChunks: {
