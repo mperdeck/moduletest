@@ -49,6 +49,9 @@
     </div>
 
     <environment include="Development">
+        <script src="~/lib/react/react.development.js"></script>
+        <script src="~/lib/react/react-dom.development.js"></script>
+
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
@@ -63,6 +66,21 @@
                 crossorigin="anonymous"
                 integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
         </script>
+
+        @*Load React from CDN*@
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js"
+                asp-fallback-src="~/lib/react/react.production.min.js"
+                asp-fallback-test="window.React"
+                crossorigin="anonymous">
+        </script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+                asp-fallback-src="~/lib/react/react-dom.production.min.js"
+                asp-fallback-test="window.ReactDOM"
+                crossorigin="anonymous">
+        </script>
+
+
+
 
 
 
