@@ -4,7 +4,9 @@
   "description": "x ts file - autocompile to wwwroot\r x ts file - jquery symbols\r x ts module - with jquery, load into local page\r x ts lib module same solution\r   ts lib module other solution, via link",
   "main": "index.js",
   "dependencies": {
-    "@types/jquery": "^3.3.6"
+    "@types/jquery": "^3.3.6",
+    "@types/react": "^16.4.12",
+    "@types/react-dom": "^16.0.7"
   },
   "devDependencies": {
     "webpack": "^4.17.1",
