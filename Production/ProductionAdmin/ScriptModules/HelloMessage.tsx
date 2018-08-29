@@ -1,5 +1,9 @@
-﻿declare var React: typeof import("react");
+﻿import { SystemMessage } from "./SystemMessage.js";
+
+declare var React: typeof import("react");
 declare var ReactDOM: typeof import("react-dom");
+
+
 
 export interface HelloMessageProps { name: string; }
 
@@ -9,9 +13,10 @@ export interface HelloMessageProps { name: string; }
 export class HelloMessage extends React.Component<HelloMessageProps, {}> {
     render() {
         return (
-            <div>
-                Hello {this.props.name}
-            </div>
+            <p>
+                <span>Hello !</span>
+                <SystemMessage message={this.props.name} />
+            </p>
         );
     }
 }
