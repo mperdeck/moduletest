@@ -4,6 +4,15 @@
   <!--Typescript settings-->
   <PropertyGroup>
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+
+    <!--
+    If you don't set this, you get an error message
+    Cannot find module 'csstype'
+    in ...\node_modules\@types\react\index.d.ts
+    -->
+    <TypeScriptModuleResolution>Node</TypeScriptModuleResolution>
+
 
     <TypeScriptOutDir>wwwroot/scripts</TypeScriptOutDir>
 
@@ -25,14 +34,28 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    
+    <!--
+    Must use 2.9 or later
+    
+    If you get error message about Typescript version, update to latest version:
+    npm install -g typescript@latest
+    (in directory with your package.json file)
+    
+    AND ALSO
+    
+    install latest TypeScript SDK from
+    https://www.microsoft.com/en-us/download/details.aspx?id=55258
+    -->
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="ScriptComponents\click-handler.ts" />
     <None Remove="ScriptModules\production-shared.ts" />
     <None Remove="ScriptModules\production-shared2.ts" />
-    <None Remove="Views\Home\Index.ts" />
+    <None Remove="Views\Home\HelloMessage.tsx" />
+    <None Remove="Views\Home\Index.tsx" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,7 +66,8 @@
     <TypeScriptCompile Include="ScriptComponents\click-handler.ts" />
     <TypeScriptCompile Include="ScriptModules\production-shared2.ts" />
     <TypeScriptCompile Include="ScriptModules\production-shared.ts" />
-    <TypeScriptCompile Include="Views\Home\Index.ts" />
+    <TypeScriptCompile Include="ScriptModules\HelloMessage.tsx" />
+    <TypeScriptCompile Include="Views\Home\Index.tsx" />
   </ItemGroup>
 
   <ItemGroup>
