@@ -1,4 +1,5 @@
-var productionAdminScriptsDir = "./ProductionAdmin/wwwroot/scripts/";
+var wwwRootDir = "wwwroot/";
+var productionAdminScriptsDir = "./" + wwwRootDir + "scripts/";
 
 module.exports = {
   mode: "production",
@@ -8,7 +9,7 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
-    path: __dirname + "/ProductionAdmin/wwwroot/dist"
+    path: __dirname + "/" + wwwRootDir + "dist"
   },
   optimization: {
     splitChunks: {

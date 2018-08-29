@@ -7,13 +7,6 @@
     <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
 
 
-    <!--To get source maps to work in Chrome, enable inline source maps and inline sources.
-    You then have to disable "normal" source maps (which are in external files)-->
-    <TypeScriptSourceMap>False</TypeScriptSourceMap>
-    <TypeScriptInlineSourceMap>True</TypeScriptInlineSourceMap>
-    <TypeScriptInlineSources>True</TypeScriptInlineSources>
-
-
     <!--
     If you don't set this, you get an error message
     Cannot find module 'csstype'
@@ -36,7 +29,33 @@
     <!--Be sure to generate ES6 modules so the browser can process them. 
     With other types of modules, you'd have to load a separate module loader-->
     <TypeScriptModuleKind>ES6</TypeScriptModuleKind>
+
+    <!--Disable external map files, because this option must be False for the TypeScriptInlineSourceMap and
+    TypeScriptInlineSources options to work-->
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <!--To get source maps to work in Chrome, enable inline source maps and inline sources.
+    You then have to disable "normal" source maps (which are in external files)-->
+    <TypeScriptInlineSourceMap>True</TypeScriptInlineSourceMap>
+    <TypeScriptInlineSources>True</TypeScriptInlineSources>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptInlineSourceMap>False</TypeScriptInlineSourceMap>
+    <TypeScriptInlineSources>False</TypeScriptInlineSources>
+  </PropertyGroup>
+
+  <Target Name="RunWebpack" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Exec Command="npx webpack" />
+  </Target>
+
+
+
+
+
+
 
 
 
