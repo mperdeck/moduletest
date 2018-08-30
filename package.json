@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@types/jquery": "^3.3.6",
+    "@types/kendo-ui": "^2018.2.4",
     "@types/react": "^16.4.12",
     "@types/react-dom": "^16.0.7"
   },
