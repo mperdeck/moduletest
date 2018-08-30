@@ -8,12 +8,20 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+
+        @*Kendo*@
+        <link rel="stylesheet" href="~/lib/kendo/kendo.common.min.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+        @*Kendo*@
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.common.min.css"
+              asp-fallback-href="~/lib/kendo/kendo.common.min.css"
+              asp-fallback-test-class="k-common-test-class" asp-fallback-test-property="opacity" asp-fallback-test-value="0" />
     </environment>
 </head>
 <body>
@@ -49,8 +57,12 @@
     </div>
 
     <environment include="Development">
+        @*React*@
         <script src="~/lib/react/react.development.js"></script>
         <script src="~/lib/react/react-dom.development.js"></script>
+
+        @*Kendo*@
+        <script src="~/lib/kendo/kendo.all.min.js"></script>
 
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
@@ -81,6 +93,12 @@
 
 
 
+        @*Load Kendo from CDN*@
+        <script src="https://kendo.cdn.telerik.com/2018.2.620/js/kendo.all.min.js"
+                asp-fallback-src="~/lib/kendo/kendo.all.min.js"
+                asp-fallback-test="window.kendo"
+                crossorigin="anonymous">
+        </script>
 
 
 
