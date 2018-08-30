@@ -79,6 +79,7 @@
 
   <ItemGroup>
     <None Remove="ScriptComponents\click-handler.ts" />
+    <None Remove="ScriptModules\CustomCell.tsx" />
     <None Remove="ScriptModules\production-shared.ts" />
     <None Remove="ScriptModules\production-shared2.ts" />
     <None Remove="ScriptModules\SystemMessage.tsx" />
@@ -92,11 +93,16 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ScriptComponents\click-handler.ts" />
+    <TypeScriptCompile Include="ScriptModules\CustomCell.tsx" />
     <TypeScriptCompile Include="ScriptModules\SystemMessage.tsx" />
     <TypeScriptCompile Include="ScriptModules\production-shared2.ts" />
     <TypeScriptCompile Include="ScriptModules\production-shared.ts" />
     <TypeScriptCompile Include="ScriptModules\HelloMessage.tsx" />
     <TypeScriptCompile Include="Views\Home\Index.tsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\kendo\" />
   </ItemGroup>
 
 </Project>
