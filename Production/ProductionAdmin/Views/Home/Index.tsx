@@ -18,6 +18,7 @@ import * as ProductionShared from "../../ScriptModules/production-shared.js";
 
 // Load React component module
 import { HelloMessage } from "../../ScriptModules/HelloMessage.js";
+import { CustomGrid } from "../../ScriptModules/CustomGrid.js";
 
 
 // -----------------------------------
@@ -38,5 +39,9 @@ ReactDOM.render(
     document.getElementById("hello-message")
 );
 
+ReactDOM.render(
+    <CustomGrid />,
+    document.getElementById("custom-grid")
+);
 
 

@@ -2,7 +2,17 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div id="hello-message"></div>
+<div style="border: solid 2px red; margin-bottom: 10px">
+    <h1>hello-message</h1>
+    <div id="hello-message"></div>
+</div>
+
+<div style="border: solid 2px red; margin-bottom: 10px">
+    <h1>custom-grid</h1>
+    <div id="custom-grid"></div>
+</div>
+
+
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
@@ -96,7 +106,7 @@
 </div>
 
 @section Scripts
-{
+    {
     <environment include="Development">
         @*Use type=module, even if you're not exporting from Index.js. This way, Chrome will handle the imports correctly in Index.js*@
         <script type="module" src="~/scripts/Views/Home/Index.js">

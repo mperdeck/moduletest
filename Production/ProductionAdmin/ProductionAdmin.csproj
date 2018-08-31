@@ -80,8 +80,12 @@
   <ItemGroup>
     <None Remove="ScriptComponents\click-handler.ts" />
     <None Remove="ScriptModules\CustomCell.tsx" />
+    <None Remove="ScriptModules\CustomGrid.tsx" />
+    <None Remove="ScriptModules\Product.ts" />
+    <None Remove="ScriptModules\ProductCategory.ts" />
     <None Remove="ScriptModules\production-shared.ts" />
     <None Remove="ScriptModules\production-shared2.ts" />
+    <None Remove="ScriptModules\products.ts" />
     <None Remove="ScriptModules\SystemMessage.tsx" />
     <None Remove="Views\Home\HelloMessage.tsx" />
     <None Remove="Views\Home\Index.tsx" />
@@ -93,6 +97,10 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ScriptComponents\click-handler.ts" />
+    <TypeScriptCompile Include="ScriptModules\Product.ts" />
+    <TypeScriptCompile Include="ScriptModules\ProductCategory.ts" />
+    <TypeScriptCompile Include="ScriptModules\products.ts" />
+    <TypeScriptCompile Include="ScriptModules\CustomGrid.tsx" />
     <TypeScriptCompile Include="ScriptModules\CustomCell.tsx" />
     <TypeScriptCompile Include="ScriptModules\SystemMessage.tsx" />
     <TypeScriptCompile Include="ScriptModules\production-shared2.ts" />

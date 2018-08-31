@@ -1,25 +1,10 @@
-﻿// /// <reference path="kendo.all.d.ts" />
-
-
-// This definition based on
+﻿// This definition based on
 // https://www.telerik.com/kendo-react-ui/components/grid/
-
 
 declare var React: typeof import("react");
 declare var ReactDOM: typeof import("react-dom");
 
-// Kendo uses different namespaces in its index.d.ts file!
-// If you need a type, make sure you get the right namespace.
-// C:\Decideware\trials\moduletest\node_modules\@types\kendo-ui\index.d.ts
-
-// Note that the index.d.ts file gets loaded automatically by virtue of sitting in
-// node_modules/@types
-
 declare var GridCell: typeof import("@progress/kendo-react-grid").GridCell;
-
-//declare var GridCell: kendo.ui.GridColumn;
-
-export interface CustomCellProps { message: string; }
 
 export class CustomCell extends GridCell {
     render() {

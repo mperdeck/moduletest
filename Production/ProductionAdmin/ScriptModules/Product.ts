@@ -1,0 +1,17 @@
+﻿
+import { ProductCategory } from "./ProductCategory.js"
+
+export class Product {
+    "ProductID": number;
+    "ProductName": string;
+    "SupplierID": number;
+    "CategoryID": number;
+    "QuantityPerUnit": string;
+    "UnitPrice": number;
+    "UnitsInStock": number;
+    "UnitsOnOrder": number;
+    "ReorderLevel": number;
+    "Discontinued": boolean;
+    "Category": ProductCategory
+}
+

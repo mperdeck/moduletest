@@ -58,14 +58,17 @@
     </div>
 
     <environment include="Development">
+        @*jQuery*@
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+
         @*React*@
         <script src="~/lib/react/react.development.js"></script>
         <script src="~/lib/react/react-dom.development.js"></script>
 
         @*Kendo*@
+        @*Load this AFTER jQuery*@
         <script src="~/lib/kendo/kendo.all.min.js"></script>
 
-        <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
@@ -95,6 +98,7 @@
 
 
         @*Load Kendo from CDN*@
+        @*Load this AFTER jQuery*@
         <script src="https://kendo.cdn.telerik.com/2018.2.620/js/kendo.all.min.js"
                 asp-fallback-src="~/lib/kendo/kendo.all.min.js"
                 asp-fallback-test="window.kendo"
