@@ -15,7 +15,7 @@
     <TypeScriptModuleResolution>Node</TypeScriptModuleResolution>
 
 
-    <TypeScriptOutDir>wwwroot/scripts</TypeScriptOutDir>
+    <TypeScriptOutDir>wwwroot/scripts/debug</TypeScriptOutDir>
 
     <!--
     Set to the root of the project, so generated directory structure within TypeScriptOutDir
@@ -111,6 +111,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\lib\kendo\" />
+    <Folder Include="wwwroot\scripts\" />
   </ItemGroup>
 
 </Project>

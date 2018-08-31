@@ -1,22 +1,22 @@
-var wwwRootDir = "wwwroot/";
-var productionAdminScriptsDir = "./" + wwwRootDir + "scripts/";
+var wwwRootDir = "wwwroot/scripts/";
+var debugDir = "./" + wwwRootDir + "debug/";
 
 module.exports = {
   mode: "production",
   entry: {
-    'views/home/index': productionAdminScriptsDir + "Views/Home/Index.js",
-    'ScriptComponents/clickhandler': productionAdminScriptsDir + "ScriptComponents/click-handler.js"
+      'views/home/index': debugDir + "Views/Home/Index.js",
+      'ScriptComponents/clickhandler': debugDir + "ScriptComponents/click-handler.js"
   },
   output: {
     filename: "[name].js",
-    path: __dirname + "/" + wwwRootDir + "dist"
+    path: __dirname + "/" + wwwRootDir + "release"
   },
   optimization: {
     splitChunks: {
       chunks: "all",
       cacheGroups: {
         scriptmodules: {
-          test: /[\\/]scripts[\\/]ScriptModules[\\/]/,
+          test: /[\\/]ScriptModules[\\/]/,
           name: 'scriptmodules',
           minSize: 0
         }
