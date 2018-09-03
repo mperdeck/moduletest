@@ -109,11 +109,11 @@
     {
     <environment include="Development">
         @*Use type=module, even if you're not exporting from Index.js. This way, Chrome will handle the imports correctly in Index.js*@
-        <script type="module" src="~/scripts/Views/Home/Index.js">
+        <script type="module" src="~/scripts/debug/Views/Home/Index.js">
         </script>
     </environment>
     <environment exclude="Development">
         @*Dist files only generated in Release mode. Note, not loaded as a module!*@
-        <script src="~/dist/Views/Home/index.js" asp-append-version="true"></script>
+        <script src="~/scripts/release/Views/Home/index.js" asp-append-version="true"></script>
     </environment>
 }
