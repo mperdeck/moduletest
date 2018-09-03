@@ -67,7 +67,37 @@
 
         @*Kendo*@
         @*Load this AFTER jQuery*@
-        <script src="~/lib/kendo/kendo.all.min.js"></script>
+        @*<script src="~/lib/kendo/kendo.all.min.js"></script>*@
+        @*<script src="https://unpkg.com/@@progress/kendo-react-grid@@1.2.0/dist/cdn/js/kendo-react-grid.js"></script>*@
+
+
+        <script src="https://unpkg.com/@@progress/kendo-data-query@@1.5.0/dist/cdn/js/kendo-data-query.js"></script>
+        <script src="https://unpkg.com/@@progress/kendo-drawing@@1.5.7/dist/cdn/js/kendo-drawing.js"></script>
+
+
+        <script src="https://unpkg.com/@@progress/kendo-grid-react-wrapper@@2018.2.719/dist/cdn/js/kendo-grid-react-wrapper.js"></script>
+        @*<script src="https://unpkg.com/@@progress/kendo-grid-react-wrapper/dist/cdn/kendo-grid-react-wrapper.js"></script>*@
+
+
+
+
+
+        <script src="https://unpkg.com/@@progress/kendo-react-dateinputs@@1.2.0/dist/cdn/js/kendo-react-dateinputs.js"></script>
+        <script src="https://unpkg.com/@@progress/kendo-react-dropdowns@@1.2.0/dist/cdn/js/kendo-react-dropdowns.js"></script>
+        <script src="https://unpkg.com/@@progress/kendo-react-grid@@1.2.0/dist/cdn/js/kendo-react-grid.js"></script>
+        <script src="https://unpkg.com/@@progress/kendo-react-inputs@@1.2.0/dist/cdn/js/kendo-react-inputs.js"></script>
+        <script src="https://unpkg.com/@@progress/kendo-react-intl@@1.2.0/dist/cdn/js/kendo-react-intl.js"></script>
+        <script src="https://unpkg.com/@@progress/kendo-react-pdf@@1.2.0/dist/cdn/js/kendo-react-pdf.js"></script>
+        <script src="https://unpkg.com/@@progress/kendo-theme-material@@1.2.1/dist/cdn/js/kendo-theme-material.js"></script>
+        <script src="https://unpkg.com/@@progress/kendo-ui@@2018.2.822/dist/cdn/js/kendo-ui.js"></script>
+
+
+
+
+
+
+
+
 
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
@@ -99,11 +129,11 @@
 
         @*Load Kendo from CDN*@
         @*Load this AFTER jQuery*@
-        <script src="https://kendo.cdn.telerik.com/2018.2.620/js/kendo.all.min.js"
+        @*<script src="https://kendo.cdn.telerik.com/2018.2.620/js/kendo.all.min.js"
                 asp-fallback-src="~/lib/kendo/kendo.all.min.js"
                 asp-fallback-test="window.kendo"
                 crossorigin="anonymous">
-        </script>
+        </script>*@
 
 
 
@@ -116,8 +146,13 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
 
-        @*Dist files only generated in Release mode. Note, not loaded as a module!*@
-        <script src="~/dist/scriptmodules.js" asp-append-version="true"></script>
+
+
+
+
+        @*====================================*@
+        @*scriptmodules files only generated in Release mode. Note, not loaded as a module!*@
+        <script src="~/scripts/release/scriptmodules.js" asp-append-version="true"></script>
 
 
 
