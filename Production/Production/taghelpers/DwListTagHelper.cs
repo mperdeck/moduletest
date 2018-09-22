@@ -22,6 +22,13 @@ namespace Production.taghelpers
         {
             _tagHelperComponentManager = tagHelperComponentManager;
 
+            // This is an ICollection. 
+            // Create a helper that takes a collection of .css urls and a .js urls
+            // and that adds TagHelperComponents for those urls
+            // (one each for link tag and script tag)
+            // making sure that if a TagHelperComponent is already in the ICollection
+            // that it isn't added again.
+
             _tagHelperComponentManager.Components.Add(
                 new DwListTagHelperComponent());
         }
