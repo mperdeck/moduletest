@@ -8,5 +8,8 @@ namespace Production.taghelpers
     {
         public string ListName { get; set; }
         public int ListId { get; set; }
+
+        public List<DwListFilterConfiguration> DwListFilterConfigurations { get; set; } = 
+            new List<DwListFilterConfiguration>();
     }
 }

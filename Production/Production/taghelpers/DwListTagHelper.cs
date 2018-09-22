@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 
 namespace Production.taghelpers
 {
+    [RestrictChildren("dw-list-filter")]
     public class DwListTagHelper: TagHelper
     {
         public string ListName { get; set; }
@@ -22,6 +23,13 @@ namespace Production.taghelpers
                 ListName = ListName,
                 ListId = ListId
             };
+
+            context.Items.Add(
+                typeof(List<DwListFilterConfiguration>), 
+                dwListConfiguration.DwListFilterConfigurations);
+            await output.GetChildContentAsync();
+
+            // ------------------
 
             var dwListConfigurationSerialised = JsonConvert.SerializeObject(dwListConfiguration);
             string variableName = "dwList" + context.UniqueId;
