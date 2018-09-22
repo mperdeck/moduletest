@@ -9,5 +9,7 @@ namespace Production.taghelpers
         public string FilterName { get; set; }
         public string FilterOperation { get; set; }
 
+        public List<DwListFilterOptionConfiguration> DwListFilterOptionConfigurations { get; set; } =
+            new List<DwListFilterOptionConfiguration>();
     }
 }

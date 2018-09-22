@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 
 namespace Production.taghelpers
 {
+    [RestrictChildren("dw-list-filter-option")]
     [HtmlTargetElement("dw-list-filter", ParentTag = "dw-list")]
     public class DwListFilterTagHelper : TagHelper
     {
@@ -23,6 +24,13 @@ namespace Production.taghelpers
                 FilterName = FilterName,
                 FilterOperation = FilterOperation
             };
+
+            context.Items.Add(
+                typeof(List<DwListFilterOptionConfiguration>),
+                dwListFilterConfiguration.DwListFilterOptionConfigurations);
+            await output.GetChildContentAsync();
+
+            // ------------------
 
             var dwListFilterConfigurations = 
                 (List<DwListFilterConfiguration>)context.Items[typeof(List<DwListFilterConfiguration>)];

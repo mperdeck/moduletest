@@ -31,7 +31,7 @@ namespace Production.taghelpers
 
             // ------------------
 
-            var dwListConfigurationSerialised = JsonConvert.SerializeObject(dwListConfiguration);
+            var dwListConfigurationSerialised = JsonConvert.SerializeObject(dwListConfiguration, Formatting.Indented);
             string variableName = "dwList" + context.UniqueId;
             string content = $"{variableName} = {dwListConfigurationSerialised}";
 
