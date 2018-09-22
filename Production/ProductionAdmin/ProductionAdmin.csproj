@@ -56,6 +56,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Production\Production.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <TypeScriptCompile Include="ScriptComponents\click-handler.ts" />
     <TypeScriptCompile Include="ScriptModules\production-shared2.ts" />
     <TypeScriptCompile Include="ScriptModules\production-shared.ts" />

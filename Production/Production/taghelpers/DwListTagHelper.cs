@@ -16,6 +16,7 @@ namespace Production.taghelpers
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
+
             var dwListConfiguration = new DwListConfiguration()
             {
                 ListName = ListName,
@@ -23,9 +24,11 @@ namespace Production.taghelpers
             };
 
             var dwListConfigurationSerialised = JsonConvert.SerializeObject(dwListConfiguration);
+            string variableName = "dwList" + context.UniqueId;
+            string content = $"{variableName} = {dwListConfigurationSerialised}";
 
             output.TagName = "script";
-            output.Content.SetHtmlContent(dwListConfigurationSerialised);
+            output.Content.SetHtmlContent(content);
         }
     }
 }
